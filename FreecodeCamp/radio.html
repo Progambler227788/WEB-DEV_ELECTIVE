@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>freeCodeCamp.org Code Radio</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" href="img/logo-512X512.png" type="image/png">
+    <style type="text/css">
+        @media{
+            .search-container{
+                display: none;
+            }
+        }
+
+
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .logo-container {
+height: 30px;
+width: 80px;
+  margin-left: 500px;
+
+
+}
+.logo {
+  height: 25px;
+  margin: 25px auto; /* Center the logo */
+  padding-left: 250px auto;
+
+
+}
+
+        #container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #video {
+            width: 100%;
+            object-fit:scale-down;
+            height: 100%;
+        }
+
+        #audio {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.3; /* Adjust the opacity as needed */
+        }
+
+        #video-controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #0A0A23;
+    z-index: 1; /* Add this line to ensure controls are on top */
+}
+
+#volume-control {
+            -webkit-appearance: none;
+            width: 100px;
+            height: 10px;
+            background-color: white; /* Set the color of the volume slider to white */
+            outline: none;
+            margin-top: 10px;
+        }
+#volume-control::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 15px;
+            height: 20px;
+            background-color: white; /* Set the color to white */
+            border: 2px solid #999
+            
+            cursor: pointer;
+            margin-top: -6px; /* Adjust the vertical position */
+        }
+
+        button {
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="search-container">
+            <button class="search-icon">
+                <img src="img/search.svg" alt="search" height="20">
+            </button>
+            <input type="text" class="search-input" placeholder="Search 9,000+ tutorials">
+        </div>
+
+        <div class="logo-container">
+            <a href="index.html" class="logo"><img src="img/logo.svg" height="25"></a>
+        </div>
+
+        <div class="menu-item">
+            <div class="dropdown">
+                <a href="news.html"><button class="buttonr buttonr1">News</button></a>
+                <a href="forum.html"><button class="buttonr buttonr1">Forum</button></a>
+                <a href="curriculum.html"><button class="buttonr buttonr1">Learn</button></a>
+            </div>
+        </div>
+    </header>
+    <div class="spacer" style="padding: 40px 0px;"></div>
+    <div class="sub-head2"><span style="color: white;">Welcome to Code Radio. 24/7 music designed for coding.</span></div>
+
+    <div id="container">
+        <video id="video" autoplay loop>
+            <source src="img/Saron3.cb9bbffcf0eaef69b98b.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <audio id="audio" autoplay loop>
+            <source src="img/Kero One - Musical Journey (Instrumental).mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+        </div>
+        <div id="video-controls">
+            <button id="leftButton">
+            <!-- SVG code for left arrow -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+  <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+</svg>
+        </button>
+        <button id="playPauseButton">
+            <!-- SVG code for play/pause button -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+        </button>
+               <input id="volume-control" type="range" min="0" max="1" step="0.1" value="1">
+
+        </div>
+    
+    <script>
+        const video = document.getElementById('video');
+        const audio = document.getElementById('audio');
+        const playPauseButton = document.getElementById('playPauseButton');
+        const volumeControl = document.getElementById('volume-control');
+
+        // Add event listeners for play/pause button
+        playPauseButton.addEventListener('click', togglePlayPause);
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space') {
+                togglePlayPause();
+            }
+        });
+
+        // Add event listener for volume control
+        volumeControl.addEventListener('input', function() {
+            audio.volume = parseFloat(volumeControl.value);
+        });
+
+        // Function to toggle play/pause
+        function togglePlayPause() {
+            if (video.paused) {
+                video.play();
+                audio.play();
+                // Replace text content with pause SVG
+                playPauseButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
+            } else {
+                video.pause();
+                audio.pause();
+                // Replace text content with play SVG
+                playPauseButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>';
+            }
+        }
+    </script>
+</body>
+</html>

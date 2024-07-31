@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    
+</head>
+<body>
+    <div id="sidebar" class="d-flex flex-column p-3">
+        <h2 class="text-center title-colored"><span class="quiz">Quiz</span><span class="zone">Zone</span></h2>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link active" id="dashboard-link">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="user-link">Users</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="feedback-link">Feedback</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="logout-link">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="main-content"></div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addUserModalLabel">Add User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="add-user-form">
+                        <div class="mb-3">
+                            <label for="add-user-name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="add-user-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="add-user-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="add-user-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="add-user-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="add-user-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-add-user">Add User</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const users = [
+            { name: 'John Doe', email: 'john@example.com', password: '********', score: 85 },
+            { name: 'Jane Doe', email: 'jane@example.com', password: '********', score: 90 },
+            // Add more users as needed
+        ];
+
+        document.getElementById('dashboard-link').addEventListener('click', function() {
+            document.getElementById('main-content').innerHTML = `
+                <h2>Dashboard</h2>
+                <div class="dashboard-info">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Students</h5>
+                            <p class="card-text">2</p>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Courses</h5>
+                            <p class="card-text">2</p>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Questions</h5>
+                            <p class="card-text">3</p>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Quiz Categories</h5>
+                            <p class="card-text">4</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        document.getElementById('user-link').addEventListener('click', function() {
+            const userTableRows = users.map((user, index) => `
+                <tr data-index="${index}">
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.password}</td>
+                    <td>${user.score}</td>
+                    <td>
+                        <button class="btn btn-custom btn-sm edit-btn">Edit</button>
+                        <button class="btn btn-custom btn-sm delete-btn">Delete</button>
+                    </td>
+                </tr>
+            `).join('');
+
+            document.getElementById('main-content').innerHTML = `
+                <h2>Users</h2>
+                <button id="add-user-btn" class="btn btn-add-user mb-3" data-bs-toggle="modal" data-bs-target="#addUserModal">Add User</button>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Score</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${userTableRows}
+                    </tbody>
+                </table>
+            `;
+
+            document.querySelectorAll('.edit-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.closest('tr').dataset.index;
+                    const user = users[index];
+                    const editFormHtml = `
+                        <form id="edit-form" data-index="${index}">
+                            <div class="mb-3">
+                                <label for="edit-name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="edit-name" value="${user.name}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="edit-email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="edit-email" value="${user.email}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="edit-password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="edit-password" value="${user.password}">
+                            </div>
+                            <button type="submit" class="btn btn-custom">Save</button>
+                            <button type="button" class="btn btn-secondary" id="cancel-edit">Cancel</button>
+                        </form>
+                    `;
+                    document.getElementById('main-content').innerHTML = editFormHtml;
+
+                    document.getElementById('edit-form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const index = this.dataset.index;
+                        users[index].name = document.getElementById('edit-name').value;
+                        users[index].email = document.getElementById('edit-email').value;
+                        users[index].password = document.getElementById('edit-password').value;
+                        document.getElementById('user-link').click();
+                    });
+
+                    document.getElementById('cancel-edit').addEventListener('click', function() {
+                        document.getElementById('user-link').click();
+                    });
+                });
+            });
+
+            document.querySelectorAll('.delete-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.closest('tr').dataset.index;
+                    users.splice(index, 1);
+                    document.getElementById('user-link').click();
+                });
+            });
+        });
+
+        document.getElementById('feedback-link').addEventListener('click', function() {
+            document.getElementById('main-content').innerHTML = `
+                <h2>Feedback</h2>
+                <p>User feedback will be displayed here.</p>
+            `;
+        });
+
+        document.getElementById('logout-link').addEventListener('click', function() {
+            // Handle logout functionality here
+            alert('Logout');
+        });
+
+        // Handle adding a new user
+        document.getElementById('add-user-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('add-user-name').value;
+            const email = document.getElementById('add-user-email').value;
+            const password = document.getElementById('add-user-password').value;
+            users.push({ name, email, password, score: 0 });
+            document.getElementById('user-link').click();
+            document.querySelector('#addUserModal .btn-close').click();
+        });
+
+        // Load dashboard content by default
+        document.getElementById('dashboard-link').click();
+    </script>
+</body>
+</html>

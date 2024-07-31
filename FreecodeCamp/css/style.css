@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #313146;
+  margin: 0;
+  padding: 0;
+}
+
+.blue-div {
+  height: 300px;
+  background-color: #3B3B4F;
+  width: 100%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  padding-left: 5px;
+  background: #1B1B32;
+  display: flex;
+      justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+}
+.button-container {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+.logo-container {
+height: 30px;
+width: 80px;
+margin-right: 130px;
+}
+
+.logo {
+  height: 25px;
+    margin: 25px auto; /* Center the logo */
+  padding-left: 25px auto;
+
+}
+
+.navbar {
+background-color: white;
+}
+.curriculum-text{
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+}
+.curriculum-text a{
+ text-decoration: none;
+ color: white;
+ margin-left: 5px;
+}
+@media screen and (max-width: 800px) {
+  .logo-container {
+    display: none;
+  }
+
+}
+.searchf{
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+
+.buttonm {
+  background-color: #0A0A23; /* Green */
+  border: none;
+  color: white;
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.button2 {
+  background-color:  #0A0A23; 
+  color: white; 
+  border: 1px solid white;
+padding-left: 5px;
+margin-right: 20px;
+}
+.button2:hover {
+  background-color: white;
+  color: #0A0A23;
+}
+svg{
+margin-left: 10px;
+}
+
+.text{
+  color: #777B83;
+  margin-left: 10px;
+  padding-bottom: 6px;
+  font-size: 20px;
+}
+.textl {
+  color: #777B83;
+  margin-left: 20px;
+  padding-bottom: 6px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  width: auto;
+  max-width: 300px; /* Adjust the maximum width as needed */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflow text */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
+}
+
+.buttonf{
+  background-color: #313146; /* Green */
+  border: none;
+  color: white;
+  height: 30px;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  margin-right: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.button3 {
+  background-color:  #313146; 
+  color: white; 
+  border: 1px solid white;
+padding-left: 5px;
+margin-right: 20px;
+}
+.button3:hover {
+  background-color: white;
+  color: #0A0A23;
+}
+.fbuttons{
+  margin-left: 30px;
+  padding: 5px;
+}
+.online{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+ .online img {
+      width: 20px; 
+      height: 20px; 
+      margin-left: 2px;
+    }
+ .big-container {
+      display: flex;
+      height: auto; /* Adjust the height as needed */
+  margin-left: 30px;
+  margin-right: 30px;
+    }
+
+    .left-div,
+    .right-div {
+      flex: 1;
+      display: flex;
+      flex-direction: column; /* Arrange children vertically */
+      padding: 10px;
+    }
+
+    .styled-cell {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 10px; /* Add padding for better spacing */
+      margin-bottom: 10px; /* Add margin between cells */
+      border-top: 2px solid #ddd; /* Horizontal line above cell */
+      border-bottom: 2px solid #ddd; /* Horizontal line below cell */
+    }
+
+    .styled-cell:first-child {
+      border-top: none; /* Remove top border for the first cell */
+    }
+
+    .styled-cell:last-child {
+      border-bottom: none; /* Remove bottom border for the last cell */
+    }
+
+    .styled-cell:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -5px; /* Offset to align with the border */
+      width: 5px;
+      height: 100%;
+    }
+
+    .styled-cell:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -5px; /* Offset to align with the border */
+      width: 5px;
+      height: 100%;
+    }
+
+    .content {
+      flex: 1;
+      padding: 0 10px;
+    }
+
+    .heading {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: white; /* Text color */
+    }
+
+    .subtext {
+      font-size: 17px;
+      color: #9FA0A8;
+    }
+
+    .text-right {
+      font-size: 16px;
+      font-weight: bold;
+      color: #767684;
+    }
+
+    .heads {
+      display: flex;
+      justify-content: space-between; /* Align items to the ends */
+      margin-bottom: 10px;
+    }
+
+    .textl {
+      color: #fff; /* Text color */
+      margin-right: 10px; /* Adjust spacing */
+    }
+
+    .styled-cell.blue:before {
+      background-color: blue; /* Set color for blue vertical line */
+    }
+
+    .styled-cell.green:before {
+      background-color: green; /* Set color for green vertical line */
+    }
+.styled-cell.yellow:before {
+      background-color: yellow; /* Set color for green vertical line */
+    }
+ .styled-cell.sky:before {
+      background-color:#86D2EF ; /* Set color for green vertical line */
+    }
+ .styled-cell.red:before {
+      background-color:red ; /* Set color for green vertical line */
+    }
+ footer {
+  background-color: #2A2A40;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  text-align: center; /* Optional: Center-align text within the footer */
+}
+
+.donation-section,
+.purpose-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donation-text {
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.purpose-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+/* Add margin between purpose buttons if needed */
+.purpose-button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.donation-button {
+  background-color: #253F60;
+  border: 2px solid #253F60;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+}

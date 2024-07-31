@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        *{
+            color:rgb(182, 50, 50);
+        }
+    .b1:hover{
+            color:blue;
+            width: 300px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+<h2>JavaScript HTML DOM</h2>
+<p>Changing the HTML style:</p>
+
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<p id="demo"></p>
+
+
+<button onclick="document.write('Hello bai kya hal');" class="b1"> My button</button>
+
+<button onclick="document.write('Hello ba');"> My btton</button>
+
+<div id="diving"></div>
+
+<!-- Tree of implemented tags is dom, document object model. Start from html then goes to head and body tags as chold tags. Browser maintains dom, using dom 
+we change values of tags, divisions are done as tags get added inside any html tag, -->
+
+<script>
+
+    alert('Ha bai kdr agya');
+    //  This line will give error alerts('Ha bai kdr agya');
+    window.alert('Ha bai kdr agya');
+
+    console.log(" using console is here");
+  
+    document.write('Hello bai kya hal');
+    // providing some html for rendering things for specific tag
+    document.getElementById("diving").innerHTML ="<p> Hello uuoioip</p>";  
+    document.writeln("write Ln 1");
+    document.writeln("write Ln 2");
+    
+    // Opens printer screen
+    // window.print('data');
+    // window.print('data2')
+
+    document.write("write  1");
+    document.write("write  2");
+ 
+    // write will overwrite string when clicked button
+    document.write('Hello bai kya hal');
+
+
+    // let is used inside block scope, while var can be used outside or inside block scope as well
+    
+
+    // let used for temporary time, var is for longer time, const is for constant values
+    // variable can be have _,$
+    
+    text =''
+    const a = 0;
+    var b = 3;
+    var b =3;
+    d = 1 + "43" -12;
+    document.write("<br>"+ d);
+    let p = 4;
+    const pingo = ["junjo"];
+    
+    for (let i = 0; i < 10; i++) {
+      text += pingo[0] + "<br>";
+    }
+    document.getElementById('demo').innerHTML=text;
+ 
+
+    //  if we don't write var, it wil be retreated as var, let can be reassigned but not declared inside the scope or even globally like below
+    // let g = 9;
+    // let g = 10;
+    
+
+    // Correct Syntax below, because f is of number type and it is allowed as f will be used as var type.
+
+    // Const can be declared and intialized only once, can't be used later
+    f = 90;
+    if( document.getElementById('demo').innerHTML ===text ){
+    
+        f = 923;
+        f = 9993;
+        console.log(f);
+    }
+    console.log(f);
+
+    
+    
+    </script>
+
+
+
+
+
+</body>
+</html>

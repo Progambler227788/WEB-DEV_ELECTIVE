@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Form For User Input</title>
+    <style>
+        *{
+            margin: 5px;
+            padding: 10px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1> FeedBack form</h1>
+    <form action="feedback_submitt.php" method="post">
+
+        <label> Enter your name:</label>
+        <input type="text" name="st_name" required autofocus>
+        <br> <br> 
+
+        <label> Enter your ID:</label>
+        <input type="number" name="st_ID" required>
+        <br> <br> 
+
+        <label> Choose your department:</label>
+
+        <select name="st_department" required>
+
+
+            <option> Computer Science</option>
+            <option> Information Technology</option>
+            <option> Business</option>
+            <option> Space Science</option>
+        </select>
+        <br> <br> 
+        <label> Enter your feedback: </label>
+        <br> <br> 
+        <textarea rows="10" cols="40" name="st_feedback">
+        </textarea>
+        <br> <br> 
+
+        <button value="Submitt" name="Submitt">Submitt</button>
+
+
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Support our charit|freeCodeCamp.org</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="icon" href="img/logo-512X512.png" type="image/png">
+</head>
+<body>
+
+ <header class="header">
+    <div class="search-container">
+      <button class="search-icon">
+        <img src="img/search.svg" alt="search" height="20">
+      </button>
+      <input type="text" class="search-input" placeholder="Search 9,000+ tutorials">
+    </div>
+    
+    <div class="logo-container">
+      <a href="index.html" class="logo"><img src="img/logo.svg" height="25"></a>
+    </div>
+    
+    <div class="menu-item">
+     <!--  <div class="globe-container">
+        <a href="#" class="globe-icon" id="globe">
+          <img src="img/globe.svg" height="25" onmouseover="hoverGlobe(this)" onmouseout="unhoverGlobe(this)">
+        </a>
+      </div> -->
+     <div class="dropdown">
+  <button class="button button1">Menu</button>
+  <div class="dropdown-content">
+    <a href="donate.html">    <button>Donate</button>
+</a>
+     <a href="curriculum.html">    <button>Curriculum</button>
+</a>
+    <div class="separator"></div>
+     <a href="Forum.html">    <button>Forum</button>
+</a>
+     <a href="news.html">    <button>News</button>
+</a>
+     <a href="radio.html">    <button>Radio</button>
+</a>
+  
+    <a href="contribute.html">    <button>Cotribute</button>
+</a>
+    <div class="separator"></div>
+   <a href="login.html"> <button class="dim-light">Sign in to change theme.</button></a>
+    
+  </div>
+</div>
+ 
+     <button class="button button2" onclick="window.location.href='login.html'">Sign In</button>
+
+    </div>
+  </header>
+  <div class="spacer" style="padding: 55px 0px;"></div>
+<div class="container">
+    <div class="green-div">
+    	<div class="big-heading2">
+  <span class="help-text">Help us do more</span>
+</div>
+<div class="textb">
+    <span>freeCodeCamp is a highly efficient education charity.</span>
+  </div>
+  <div class="textb">
+    <span>When you donate to freeCodeCamp, you help people learn new skills and provide for their families.</span>
+  </div>
+  <div class="textb">
+    <span>You also help us create new resources for you to use to expand your own technology skills.</span>
+  </div>
+  <div class="big-heading2">
+  <span class="help-text">Confirm your donation of $<span id="donationAmount">5</span>/month</span>
+</div>
+<div class="donation-buttons">
+  <button onclick="updateDonation(5)">5</button>
+  <button onclick="updateDonation(10)">10</button>
+  <button onclick="updateDonation(20)">20</button>
+  <button onclick="updateDonation(40)">40</button>
+</div>
+<div class="textc">
+	 <div class="donation-divider"></div>
+  <span>Your $<span id="totalDonation">40</span> donation will provide <span id="learningHours">2,000</span> hours of learning to people around the world each month.</span>
+  <div class="donate-btn"><button class="btn-donate">Donate</button></div>
+</div>
+
+    </div>
+    <div class="red-div">
+    
+  <img class="responsive-image" src="img/wide-image-3cb329e8b3cae865be76746fbd069cd2.png" alt="Image Description" style="width: 500px; height: auto;">
+
+<div class="spacer" style="padding: 5px 0px;"></div>
+<p class="sub-text">freeCodeCamp students at a local study group in South Korea.</p>
+    </div>
+  </div>
+<div class="questions">
+	 <h2 class="big-heading1">Frequently asked questions:</h2>
+  <div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">How can I get help with my donations?</h3>
+    <div class="para">Forward a copy of your donation receipt to donors@freecodecamp.org and tell us how we can help.</div>
+     <div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">How transparent is freeCodeCamp.org?</h3>
+    <div class="para">Very. We have a Platinum transparency rating from GuideStar.org.
+</div> 
+<div class="para">VYou can download our IRS Determination Letter here.
+
+
+
+</div><div class="para">You can download our most recent 990 (annual tax report) here.
+</div>
+<div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">How efficient is freeCodeCamp?</h3>
+    <div class="para">freeCodeCamp's budget is much smaller than most comparable charities. We haven't brought in professional fundraisers. Instead, Quincy does everything himself.</div> 
+<div class="para">However, on a budget of only a few hundred thousand dollars per year, we have been able to help millions of people.</div>
+<div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">How can I make a one-tie donation?</h3>
+    <div class="para">If you'd prefer to make one-time donations, you can support freeCodeCamp's mission whenever you have cash to spare. You can use this link to donate whatever amount feels right through PayPal.</div> 
+ <div class="para">You can also send money to freeCodeCamp directly through a wire transfer. If you need our wire details, email Quincy at quincy@freecodecamp.org</div>
+ <div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">Does freeCodeCamp accept donations in Bitcoin or other cryptocurrencies?</h3>
+    <div class="para">Yes. Please email Quincy at quincy@freecodecamp.org and he can send you freeCodeCamp's wallet information. He can also provide you with a donation receipt if you need one for your taxes.</div> <div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">How can I mail a physical check?</h3>
+    <div class="para">Yes, we would welcome a check. You can mail it to us at:
+
+</div> 
+<div class="para">Free Code Camp, Inc.
+3905 Hedgcoxe Rd
+PO Box 250352
+Plano, TX 75025
+</div>
+<div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">How can 
+i set up matching gifts from my employer, or payroll deduction?</h3>
+    <div class="para">This varies from employer to employer, and our charity is already listed in many of the big donation-matching databases.
+
+</div>  <div class="para">Some people are able to volunteer for freeCodeCamp and their employer matches by donating a fixed amount per hour they volunteer. Other employers will match any donations the donors make up to a certain amount
+
+
+
+</div> <div class="para">If you need help with this, please email Quincy directly: quincy@freecodecamp.org
+
+
+
+
+</div><div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">How can I set up an Environment Gift to freeCodeCamp.org</h3>
+    <div class="para">This would be a huge help. Since this is a more manual process, Quincy can help walk you through it personally. Please email him directly at quincy@freecodecamp.org.</div> <div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">How can I set up a Legacy gift to freeCodeCamp.org</h3>
+    <div class="para">We would be honored to put such a gift to good use helping people around the world learn to code. Depending on where you live, this may also be tax exempt.</div> 
+ <div class="para">I give, devise, and bequeath [the sum of _____ USD (or other currency) OR _____ percent of the rest and residue of my estate] to freeCodeCamp.org (Free Code Camp, Inc. tax identification number 82-0779546), a charitable corporation organized under the laws of the State of Delaware, United States, currently located at 3905 Hedgcoxe Rd, PO Box 250352, Plano, Texas, 75025 United States, to be used for its general charitable purposes at its discretion.</div> 
+ <div class="para">We would like to thank the Wikimedia Foundation for providing this formal language for us to use.</div> 
+ <div class="para">If you have any questions about this process, please email Quincy at quincy@freecodecamp.org.
+
+
+</div> 
+    <div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">How can I donate stock to freeCodeCamp.org?</h3>
+    <div class="para">We would welcome your stock donations. Please email Quincy directly and he can help you with this, and share our charity's brokerage account details: quincy@freecodecamp.org.</div> <div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">I set up a monthly donation, but I need to update or pause the monthly recurrence.How can I do this?</h3>
+    <div class="para">Forward a copy of your donation receipt to donors@freecodecamp.org and tell us how we can help.</div> <div data-test-label="landing-page-faq" data-playwright-test-label="landing-page-faq"><h3 class="faq-question">Is there anything else I can learn about donating to freeCodeCamp.org</h3>
+    <div class="para">If there is some other way you'd like to support our charity and its mission that isn't listed here, or if you have any questions at all, please email Quincy at quincy@freecodecamp.org.</div>
+</div>
+     <footer>
+  <div class="donation-section">
+    <div class="donation-text">
+      <p>You can make a tax-deductible donation here.</p>
+    </div>
+    <button class="donation-button">Trending Guides</button>
+  </div>
+  <div class="separator"></div>
+  <div class="purpose-buttons">
+    <button class="purpose-button">About</button>
+    <button class="purpose-button">Alumni Network</button>    <button class="purpose-button">Button 1</button>
+    <button class="purpose-button">Open Source</button>
+    <button class="purpose-button">Shop</button>
+    <button class="purpose-button">Support</button>
+    <button class="purpose-button">Sponsors</button>
+    <button class="purpose-button">Academic Honesty</button>
+    <button class="purpose-button">Code of Conduct</button>
+    <button class="purpose-button">Privacy Policy</button>
+    <button class="purpose-button">Terms of Service</button>
+    <button class="purpose-button">Copyright Policy</button>
+
+
+  </div>
+</footer>
+<script type="text/javascript">
+    console.log('Donation.js loaded');
+
+const dropdown = document.querySelector('.dropdown');
+const dropdownContent = document.getElementById('mydropdown'); // Adjust this ID to match your HTML
+
+dropdown.addEventListener('click', function (event) {
+  event.stopPropagation();
+  dropdown.classList.toggle('active');
+});
+
+document.addEventListener('click', function () {
+  dropdown.classList.remove('active');
+});
+
+function updateDropdownPosition() {
+  const rect = dropdown.getBoundingClientRect();
+  const screenWidth = window.innerWidth;
+  const dropdownWidth = dropdownContent.offsetWidth;
+
+  const leftPosition = Math.min(screenWidth - dropdownWidth, rect.left);
+
+  dropdownContent.style.left = leftPosition + 'px';
+}
+
+window.addEventListener('resize', updateDropdownPosition);
+
+window.addEventListener('load', function () {
+  updateDropdownPosition();
+  dropdownContent.style.display = 'none';
+});
+
+document.addEventListener('scroll', function () {
+  dropdown.classList.remove('active');
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    dropdown.classList.remove('active');
+  }
+});
+
+// ... (rest of your donation.js code)
+
+// Define variables to store donation-related information
+let currentDonation = 20; // Initial donation amount
+const donationAmountElement = document.getElementById('donationAmount');
+const totalDonationElement = document.getElementById('totalDonation');
+const learningHoursElement = document.getElementById('learningHours');
+
+// Function to update donation information
+function updateDonation(amount) {
+  currentDonation = amount;
+  donationAmountElement.textContent = amount;
+  totalDonationElement.textContent = currentDonation * 2; // Assuming 1 dollar = 2 learning hours
+  learningHoursElement.textContent = currentDonation * 100;
+}
+
+// Function to handle the donation button click
+function donate() {
+  // You can implement the donation submission logic here
+  // For example, you might want to open a donation form or perform an API request
+  alert(`Thank you for your donation of $${currentDonation}/month!`);
+}
+
+// Attach click event listeners to the donation buttons
+document.querySelector('.donation-buttons button:nth-child(1)').addEventListener('click', () => updateDonation(5));
+document.querySelector('.donation-buttons button:nth-child(2)').addEventListener('click', () => updateDonation(10));
+document.querySelector('.donation-buttons button:nth-child(3)').addEventListener('click', () => updateDonation(20));
+document.querySelector('.donation-buttons button:nth-child(4)').addEventListener('click', () => updateDonation(40));
+
+// Attach click event listener to the donate button
+document.querySelector('.btn-donate').addEventListener('click', donate);
+
+</script>
+ </body>
+</html>

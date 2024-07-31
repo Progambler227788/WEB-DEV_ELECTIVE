@@ -1,0 +1,809 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #1B1B32;
+  margin: 0;
+  padding: 0;
+}
+
+.blue-div {
+  height: 300px;
+  background-color: #3B3B4F;
+  width: 100%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  padding-left: 5px;
+  background: #0A0A23;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo-container {
+height: 30px;
+width: 80px;
+}
+
+.logo {
+  height: 25px;
+  margin: 25px auto; /* Center the logo */
+  padding-left: 25px auto;
+}
+
+.navbar {
+background-color: white;
+}
+
+.search-container {
+  display: flex;
+  align-items: stretch;
+  width: 60%; /* Adjusted width for responsiveness */
+  max-width: 300px; /* Added max-width for responsiveness */
+}
+
+.search-input {
+  padding: 8px;
+  background-color: #3B3B4f;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  margin-right: 8px;
+  outline: none;
+  height: 40px;
+  width: 100%; /* Adjusted width for responsiveness */
+}
+.search-icon {
+  padding: 8px;
+  background: #3B3B4f;
+  border: none;
+  cursor: pointer;
+    height: 40px;
+
+}
+
+.search-icon img {
+  width: 100%;
+  height: 100%;
+}
+.search-input::placeholder {
+    color: white; /* Change the placeholder color to white */
+
+}
+.globe-container {
+  display: none;
+  border: 1px solid white; /* Set the border color to white */
+}
+
+.globe-container:hover {
+  background-color: white;
+}
+
+.globe-icon {
+  padding: 4px;
+  display: block;
+  height: 30px;
+  transition: background-color 0.3s;
+}
+
+.globe-icon img {
+  width: 100%;
+  height: 100%;
+}
+.globe-container {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+
+.menu-item {
+  display: flex;
+margin-left: 100% auto;
+    margin-right: 5px;
+align-items: center;
+}
+.button {
+  background-color: #0A0A23; /* Green */
+  border: none;
+  color: white;
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+.button1 {
+  background-color:  #0A0A23; 
+  color: white; 
+  border: 1px solid white;
+      margin-right: 5px;
+
+}
+.button1:hover {
+  background-color: white;
+  color: #0A0A23;
+}
+.button2 {
+  background-color:#F1A02A;
+  color:   #0A0A23;
+  border: 1px solid  #F1A02A;
+  margin-right: 25px;
+}
+.button2:hover {
+  
+  background-color:#FFC042 ;
+  border: 3px solid #F1A02A;
+}
+.section-a {
+      color: white; /* Text color */
+      text-align: left;
+      padding: 50px;
+      margin: 30px;
+    }
+.big-heading{
+    font-weight: 700;
+    height: 100%;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    margin-left: 10px;
+}
+   .big-heading {
+    font-size: 2.5rem!important;
+    overflow-wrap: break-word;
+}
+
+ .logo-row {
+        display: flex;
+        justify-content: space-between; /* Adjust the spacing between logos */
+        align-items: center; /* Align logos vertically in the center */
+    }
+
+    .logo-row img {
+  height: 50px;
+  margin-right: 5%; /* Adjusted margin for responsiveness */
+}
+.buttona.button3 {
+  background-color: #F1A02A;
+  border: none;
+  color: #0A0A23;
+  height: 49.44px;
+  width: 500px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px; /* Adjust font size to make it big */
+  margin-right: 40px;
+  transition-duration: 0.4s;
+  align-items: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+.button3:hover {
+  background-color: #FFC042;
+  border: 5px solid #F1A02A;
+}
+
+.button3 {
+  text-align: center;
+  background-color: #F1A02A;
+  color: #0A0A23;
+  border: 1px solid #F1A02A;
+  font-size: 24px; /* Adjust font size to make it big */
+}
+
+.center-button {
+  text-align: center;
+  padding: 20px;
+}
+/* Media query for smaller screens */
+@media screen and (max-width: 800px) {
+  .search-container {
+    display: none;
+  }
+.imga{display: none;}
+  .logo-row img {
+    margin-right: 0;
+  }
+}
+.text-center{
+  text-align: center;
+  color: white;
+      font-family: var(--font-family-monospace);
+font-weight: 700rem;
+font-size: 30px;
+}
+.testimonials-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #1B1B32; /* Dark blue background color */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.testimonial-card {
+  display: flex;
+  align-items: stretch;
+  background-color: #0A0A23; /* Dark blue background color for cards */
+  box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.09);
+  margin-bottom: 20px;
+  width: auto; /* Set width to auto to fit the content */
+  padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box;
+  color: white; /* Set text color to white */
+  text-align: center; /* Center text */
+  font-size: 30px;
+}
+
+.testimonial-card img {
+  width: auto; /* Adjust the image width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add space between the image and text */
+}
+
+.testimonial-card-header {
+  flex: 1; /* Take remaining space in the flex container */
+}
+
+.testimonial-card-header h3 {
+  margin-bottom: 30px; /* Add space between the name and occupation */
+font-size: 30px;
+}
+
+.testimonial-card-footer {
+  margin-top: 20px; /* Add space between the text and the image */
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex-direction: column; /* Stack elements on smaller screens */
+  }
+
+  .testimonial-card img {
+    width: 100%; /* Make the image fill the width of the container */
+    margin-bottom: 10px; /* Add some space between the image and text */
+  }
+}
+
+/* Adjust styles for even smaller screens */
+@media (max-width: 480px) {
+  .testimonial-card {
+    width: 100%;
+  }
+}
+.study-grp{
+  color: white;
+  font-size: 20px;
+}
+.imga{
+  align-items: center;
+}
+:root {
+  --primary-background: #3B3B4F; /* Updated background color */
+  --secondary-color: #3B3B4F;
+  --hover-background: white;
+  --hover-text-color: black;
+}
+
+.map-ui ul {
+  list-style: none;
+  padding: 0;
+}
+
+.map-ui ul li {
+  width: 90%;
+  max-width: 720px;
+  margin: 0 auto;
+  margin-bottom: 20px; /* Increased margin for better spacing */
+  box-sizing: border-box;
+}
+
+.map-ui ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: white;
+  border: 3px solid white;
+  padding: 20px; /* Increased padding for bigger size */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.map-ui ul li a:hover {
+  background-color: var(--hover-background);
+  color: var(--hover-text-color);
+  border-color: black;
+}
+
+.map-ui ul li a:hover svg {
+  fill: black;
+}
+
+.map-ui ul li svg {
+  height: 40px; /* Increased the height of the icon for bigger size */
+  width: 40px; /* Increased the width of the icon for bigger size */
+  fill: white;
+  margin-inline-end: 20px; /* Increased margin for better spacing */
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+  .map-ui ul li {
+    width: 100%;
+  }
+
+  .map-ui ul li svg {
+    height: 30px; /* Adjusted the size of the icon for smaller screens */
+    width: 30px; /* Adjusted the size of the icon for smaller screens */
+  }
+}
+.big-heading1{
+    font-weight: 700;
+    height: 100%;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    color: white;
+    margin-right: 60px;
+
+}
+   .big-heading1 {
+    font-size: 30px;
+    overflow-wrap: break-word;
+padding-left:   200px;
+text-align: center;
+}
+.faq-question {
+    font-family: var(--font-family-sans-serif);
+    font-weight: 800;
+    margin-bottom: 1.4rem;
+    color: white;
+    padding-left:   30px
+font-size: 1.25rem;
+    overflow-wrap: break-word;
+    height: 100%;
+    align-items: center;
+    margin-left: 120px;
+}
+
+.para1{
+      font-size: 1.2rem!important;
+      color: white;
+padding-left:   10px
+
+}
+.para{
+  align-items: center;
+  width: auto;
+      font-size: 1.2rem!important;
+      color: white;
+text-align: left;
+margin-left: 120px;
+margin-bottom: 30px;
+
+}
+footer {
+  background-color: #2A2A40;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  text-align: center; /* Optional: Center-align text within the footer */
+}
+
+.donation-section,
+.purpose-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donation-text {
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.purpose-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+/* Add margin between purpose buttons if needed */
+.purpose-button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.donation-button {
+  background-color: #253F60;
+  border: 2px solid #253F60;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown .button {
+      background-color: #0A0A23;
+      color: white;
+border: 1px solid white;
+      margin-right: 5px;     
+      cursor: pointer;
+      margin-left: 5px;
+    }
+    .dropdown .button:hover {
+  background-color: white;
+  color: #0A0A23;
+}
+
+     .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0A0A23;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 250px;
+    min-width: 250px;
+white-space: nowrap;
+left: 0;
+right: 100px
+text-decoration: none;
+  }
+.dropdown-content a {
+  text-decoration: none;
+}
+   .dropdown-content button {
+    background-color: #0A0A23;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+        margin-bottom: 8px; /* Additional margin between buttons */
+
+  }
+
+     .dropdown-content button:hover {
+    background-color: white;
+    color: #0A0A23;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+  .dropdown-content .separator {
+    height: 1px;
+    background-color: white;
+    margin: 5px 0;
+        margin: 10px 0; /* Adjusted margin for separators */
+
+  }
+  .dropdown-content .dim-light {
+    color: #555; /* Dim light color */
+  }
+
+.container {
+  display: flex;
+}
+
+.green-div {
+  flex: 1;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.red-div {
+  flex: 1;
+  height: 100vh; /* Adjust the height as needed */
+width: auto;
+margin-left: 100px;
+}
+@media (max-width: 800px) {
+  .red-div {
+    display: none; /* Hide the red div on smaller screens */
+  }
+}
+.sub-text{
+  margin-left: 20px;
+  color: white;
+  font-size: normal;
+}
+.textb{
+  color: white;
+  margin: 20px;
+}
+
+.big-heading2{
+  margin-top: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+    margin-right: 60px;
+    text-align: center;
+
+}
+   .big-heading2 {
+    overflow-wrap: break-word;
+padding-left:   100px;
+}
+.donation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+    align-items: center;
+margin-left: 30px;
+}
+
+.donation-buttons button {
+  background-color: #1B1B32;
+  font-size: 30px;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0.5px;
+  cursor: pointer;
+  transition: color 0.3s; /* Add transition for smooth color change */
+}
+
+.donation-buttons button:hover {
+  background-color: #BFBFC3;
+  color: #0A0A23; /* Change text color on hover */
+}
+.textc{
+  color: white;
+  align-items: flex-end;
+  text-align: left;
+  width: 300px;
+  height: 100px;
+  margin-left: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+}
+.donation-divider {
+  width: 240px;
+  height: 1px;
+  background-color: white;
+  margin: 20px 0;
+margin-top: 0px;
+}
+.btn-donate {
+  color: black;
+  height: 40px;
+  width: 250px;
+  background-color: #D0A030;
+  border: 2px solid black; /* Add a circular border with black color */
+  border-radius: 2px; /* Make the border circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Remove the default underline */
+align-items: center;
+  margin-right: 40px;
+  margin-top: 10px
+
+}
+
+.donate-btn{
+  align-items: center;
+}
+
+.frequently{
+  background-color: red;
+  height: 300px;
+  width: 200px;
+}
+.questions{
+  margin-right: 0px;
+  padding: 0px;
+}
+.big-heading3{
+  margin-top: 40px;
+    line-height: 1.1;
+    color: white;
+    margin-right: 60px;
+    text-align: auto;
+
+}
+   .big-heading3 {
+    overflow-wrap: break-word;
+padding-left:   100px;
+}
+
+.buttona.button4 {
+  background-color: #F1A02A;
+  border: none;
+  color: #0A0A23;
+  height: 49.44px;
+  width: 550px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px; /* Adjust font size to make it big */
+  margin-right: 40px;
+  transition-duration: 0.4s;
+  align-items: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+.sub-head {
+  color: whites;
+  background-color: #002EAD;
+  height: 40px;
+  font-size: 24px; /* Adjust font size as needed */
+  text-align: center; /* or any other alignment you prefer */
+  /* Add any additional styles as needed */
+padding: 5px;
+}
+
+    .post-container {
+      max-width: 900px;
+      margin: 20px auto;
+    
+      padding: 20px;
+      position: relative;
+    }
+
+    .post-image {
+      float: left;
+      max-width:300px;
+      max-height: 3000px;
+      margin-right: 20px;
+    }
+
+    .hashtag {
+      position: absolute;
+      margin-top: 20px;
+      top: 10px;
+      left: 10px;
+      font-size: 16px;
+      color: black; /* Blue color, you can change it */
+   margin-left: 340px;
+    }
+
+    .post-heading {
+      padding-top: 20px;
+            margin-top: 50px;
+
+      margin-top: 0;
+    }
+
+    .profile-pic {
+
+      max-width: 50px;
+      max-height: 50px;
+      margin-right: 10px;
+    }
+
+    .profile-info {
+
+      display: flex;
+      align-items: center;
+    }
+
+     .time {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: #777; /* Gray color, you can change it */
+    }
+.load-mor{
+  align-items: center;
+margin-left: 300px;
+}
+
+
+.buttonmre {
+  background-color: #0A0A23; /* Green */
+  border: none;
+  color: white;
+  height: 30px;
+  width: 100px;
+  margin-left: 300px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+.buttonmor {
+  background-color:  #0A0A23; 
+  color: white; 
+  border: 1px solid white;
+      margin-right: 5px;
+
+}
+.button1mor:hover {
+  background-color: white;
+  color: #0A0A23;
+}
+
+.sub-head2 {
+  color: whites;
+  background-color: #0A0A23;
+  height: 40px;
+  font-size: 24px; /* Adjust font size as needed */
+  text-align: center; /* or any other alignment you prefer */
+  /* Add any additional styles as needed */
+padding: 5px;
+}
+
+.buttonr {
+  background-color: #0A0A23; /* Green */
+  border: none;
+  color: white;
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+.buttonr1 {
+  background-color:  #0A0A23; 
+  color: white; 
+  border: none;
+      margin-right: 5px;
+
+}
+.buttonr1:hover {
+  background-color: white;
+  color: #0A0A23;
+}
+    .logo-containera {
+height: 30px;
+width: 80px;
+margin-right: 0;
+padding-left: 20px;
+}
+
+.logoa {
+  height: 25px;
+  margin: 25px auto; /* Center the logo */
+}
+

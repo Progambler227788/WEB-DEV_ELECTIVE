@@ -1,0 +1,10 @@
+Bootstrap is a framework, code is fetched from a
+website, colors are primary, danger, sucess 
+Primary -> Blue
+Danger -> Red
+Success -> Green
+Warning -> Yellow
+
+In CSS, box-sizing : border-box; is used to
+reduce width of element so that padding, border size
+can't increase its size.

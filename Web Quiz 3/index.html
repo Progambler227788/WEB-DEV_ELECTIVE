@@ -1,0 +1,172 @@
+<!-- Name: M.Talha Atif -->
+ <!-- ID: F2021266573 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>talha atif quiz number 3</title>
+    <style>
+        button{
+            background-color: #9be0c7;
+            border-radius: 10px solid yellow;
+            border-top-right-radius: 10px;
+            
+            margin: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<!--  my body of dom document  (dom is my heirarchy of elements given through tags , root is html then so on child nodes are body and head) -->
+<body>
+    <!-- Button for checking number given is odd or even -->
+    <button onclick="checkEvenOdd()"> Even-Odd</button>
+    <!-- This div will be used to display result for even and odd number -->
+    <div id="resultEvenOdd">  </div>
+
+    <!-- Button for printing array in reverse order -->
+    <button onclick="reverseArray([1,2,3,4,'talha atif','checking test post get'])"> Reverse the array </button>
+    <!-- This div will be used to display result for reverse of array -->
+    <div id="reverseArray"> </div>
+
+
+    <!-- Button for getting index of element in array-->
+    <button onclick="useGetIndex()"> Get element index </button>
+    <!-- This div will be used to display result for displaying index of fetched element  -->
+    <div id="getIndex"> </div>
+
+     <!-- Button for getting index of element in array-->
+     <button onclick="takeColor()"> Set Background Color </button>
+     <!-- This div will be used to display result for displaying index of fetched element  -->
+     <div id="takeColor"> </div>
+
+   
+    <!-- Javascript code is here below -->
+    <script>
+    //  This function will check number taken from windows prompt
+    // Using if number will be divided by 2, if remainder is zero than result is even
+    // Else result will be odd
+    // 2%2 == 0 is so it is even
+    // 3%2 == 2 so it is odd
+        function checkEvenOdd(){
+            //  taking input
+            let number = parseInt(  prompt('Enter a number: '))
+            // checking using if condition
+            // even case
+            if (number%2==0){
+                document.getElementById("resultEvenOdd").innerHTML=  "Hey!, you entered " + number + " -> is even (:"
+            }
+            // odd case
+            else{
+                document.getElementById("resultEvenOdd").innerHTML=  "Hey!, you entered " + number + " -> is odd ):"
+            }
+        }
+
+        // Question 2
+        // function to print elements in reverse order of the array
+
+        function reverseArray(myArray){
+            //  this line will add string in div reverse array
+            document.getElementById("reverseArray").innerHTML = "Hey Reverse of your given array: -> "
+            // iterate from end of array index and then go upward towards 0 like array size is 5, then 4 to 0 by 
+            // decrementing --, -- here is postfix operator with --
+            left = 0
+            right = myArray.length-1
+            while(left < right){
+                let temp = myArray[left];
+                myArray[left] = myArray[right];
+                myArray[right] = temp;
+                left++
+                right--
+            }
+            for( i = 0; i<myArray.length ; i++){
+                console.log( myArray[i])
+                // using ' ', we added space and using += we concatenated so that previous element not lost
+                document.getElementById("reverseArray").innerHTML +=  myArray[i] + ' '
+            }
+        }
+
+        // Question 3
+
+        // function that takes number as input and give index, for doing that we can pass array as well
+        // to function or may be we can create inside function
+        function getIndex(myArray, element){
+            //  this line will add string in div reverse array
+          
+            // iterate from starting index 0 to end index that is length of array - 1
+            index = -1
+            for( i = 0; i < myArray.length - 1 ; i++){
+                if (element == myArray[i]){
+                 index = i
+                 break; // here breaking because may be there are duplicate values in our array being passed
+                }
+                 
+            } // end of for loop
+
+            return index // it will give -1 if element is not in array
+        }
+
+        // Use above function to get index of array
+
+        function useGetIndex(){
+            myArray = new Array(10)
+            // hard code assignment
+            myArray[0] = 'talha'
+            myArray[1] = 'how are you'
+            myArray[2] = 'how are you too'
+            myArray[3] = 4
+            // 30,31,32,33,34,35,36 will be values stored using below loop (assigning using loop)
+            // i've used m as index for iteration and i as value for assignment
+            m = 0
+            for (i = 30, m=4; i <37; i++,m++){
+                myArray[m] = i
+            }
+            console.log(myArray)
+            let element = prompt('Hey enter element to find: ')
+
+            // get index of element
+            let obtainedIndex = getIndex(myArray, element)
+
+            if( obtainedIndex  != -1){ // -1 means that element is not there, and not -1 mean element is there
+              document.getElementById("getIndex").innerHTML = "Hey Index for given element " + element + "is : -> " + obtainedIndex 
+            }
+            else{
+                
+                document.getElementById("getIndex").innerHTML = 'OOps! your element is not in that array'
+            }
+
+        }
+
+        // Question 4
+        // Taking color from user or setting it as bacground color
+        
+
+      
+        function takeColor(){
+           color =  prompt('Hey! please enter a color or you can type hex code without hash sign (should be 6 letters for hex code)')
+           if (color.length <=1 ){
+                document.getElementById("takeColor").innerHTML = 'Color Length should be greater than 1 for giving hex code or name'
+           }
+           hexCode = false
+           for( i=0; i< color.length -1 ; i++){
+               if (color[i]>='0' && color[i]<='9'){
+                hexCode = true
+               }
+           }
+           if(hexCode){ // by hexa code
+            document.body.style.backgroundColor = '#' + color
+            document.getElementById("takeColor").innerHTML = 'Color given using hexacode: -> #' + color
+           }
+           else{ // by name
+            document.body.style.backgroundColor = color
+            document.getElementById("takeColor").innerHTML = 'Color given using name: -> ' + color
+           }
+
+           
+        }
+
+
+        // end of script tag
+    </script>
+
+    <!-- End of html body tag -->
+</body>
+</html>

@@ -1,0 +1,5 @@
+Media queries are used to make web response, we use
+on them for print, screen and speech devices those who
+can't see screen.
+In portait, height is greater than width (vertical).
+In landscape, width is greater than height (horizontal).

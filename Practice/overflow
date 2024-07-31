@@ -1,0 +1,17 @@
+data that is overflowed is exceeds height of div.
+
+Overflow has property of hidden, scroll, auto, visible.
+
+Hidden additional data gets hide.
+Scroll is like scrollbar for additional data.
+Auto automatically adds scrollbar for additional data.
+(horizontal scrollbar for horizontal overflowed data and same for vertical)
+
+(Horizontal in case width is outside the div)
+
+Scroll will remain even if data is not overflowed
+Types of properties in overflow:
+
+overflow
+overflow-x (horizontally overflow )
+overflow-y (handling verftical overflow)

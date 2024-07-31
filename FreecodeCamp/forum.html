@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The freeCodeCamp Forum - Join the developer community and learn to code for free.</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" href="img/logo-512X512.png" type="image/png">
+  <style>
+     .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    padding-left: 5px;
+    background: #1B1B32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .button-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .buttonm {
+    background-color: #0A0A23;
+    border: none;
+    color: white;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .button2 {
+    background-color: #0A0A23;
+    color: white;
+    border: 1px solid white;
+    padding-left: 5px;
+    margin-right: 20px;
+  }
+
+  .button2:hover {
+    background-color: white;
+    color: #0A0A23;
+  }
+
+ 
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#313146 ;
+  width: 500px;
+  right: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Mega Menu header, if needed */
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
+  display: none;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 45.33%;
+  background-color: #313146;
+  height: 300px;
+  margin-left: 20px;
+}
+
+/* Style links inside the columns */
+.column a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}}
+
+
+</style>
+</head>
+<body>
+  <header class="header">
+     <div class="curriculum-text">
+      <a href="curriculum.html"><span>Visit the Curriculum </span></a>
+    </div>
+    <div class="logo-container">
+      <a href="index.html" class="logo"><img src="img/logo.svg" height="25"></a>
+    </div>
+    
+    <div class="button-container">
+      <button class="buttonm button2" onclick="window.location.href='signup.html'">SIGN UP</button>
+      <button class="buttonm button2"onclick="window.location.href='login.html'">SIGN IN</button>
+
+      <div class="searchf">
+        <a href="#">
+          <img src="img/searchf.svg" style="height: 30px; width: 30px; margin-top: 5px; padding-top: 5px; align-items:center; margin-bottom: 3px;">
+        </a>
+      </div>
+   <div class="dropdown">
+
+     <svg viewBox="0 0 100 80" fill="white" width="40" height="40">
+    <rect width="100" height="10"></rect>
+    <rect y="30" width="100" height="10"></rect>
+    <rect y="60" width="100" height="10"></rect>
+  </svg>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Mega Menu</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          
+          <a href="#"><img src="img/stack.svg" style="padding-top: 10px;"><span class="text">Topics</span></a>
+          <a href="#"><img src="img/person-plus.svg" style="padding-top: 10px;"><span class="text">Users</span></a><a href="#"><img src="img/question-circle.svg" style="padding-top: 10px;"><span class="text">FAQ</span></a>
+          <div class="spacer" style="padding: 10px 0px;"></div>
+          <a href="#"><span class="text">Categories</span></a>
+          <div class="spacer" style="padding: 10px 0px;"></div>
+          <div style="background-color: #775E18;height: 15px;width: 15px;margin-top: 5px;"><span class="textl">JavaScript
+          </span></div>
+          <div class="spacer" style="padding: 5px 0px;"></div>
+          <div style="background-color: #6EACC4;height: 15px;width: 15px;margin-top: 5px;"><span class="textl">HTML-CSS</span></div>
+          <div class="spacer" style="padding: 5px 0px;"></div>
+          <div style="background-color: #70356B;height: 15px;width: 15px;margin-top: 5px;"><span class="textl">C#
+          </span></div>
+          <div class="spacer" style="padding: 10px 0px;"></div>
+          <a href="#"><img src="img/brush-fill.svg" style="padding-top: 10px;"><span class="text">Dawn Theme</span></a>
+          <div class="spacer" style="padding: 30px 0px;"></div>
+        </div>
+        <div class="column">
+         <a href="#"><img src="img/bell.svg" style="padding-top: 10px;"><span class="text">Unread Topics</span></a><a href="#"><img src="img/exclamation-circle.svg" style="padding-top: 10px;"><span class="text">About</span></a><a href="#"><img src="img/patch-check-fill.svg" style="padding-top: 10px;"><span class="text">Badges</span></a>
+          <div class="spacer" style="padding: 30px 0px;"></div>
+          <div style="background-color: green;height: 15px;width: 15px;margin-top: 5px;"><span class="textl">Python
+          </span></div>
+          <div class="spacer" style="padding: 5px 0px;"></div>
+          <div style="background-color: #FFAD25;height: 15px;width: 15px;margin-top: 5px;"><span class="textl">Backend Development</span></div>
+          <div class="spacer" style="padding: 5px 0px;"></div>
+         <div style="background-color:white;margin-left: 5px;"> <a href="#"><img src="img/list-ul.svg" style="padding-top: 10px;"><span class="text">All categories</span></a></div>
+         <div class="spacer" style="padding: 10px 0px;"></div>
+         <img src="img/phone.svg">
+         
+          <img src="img/keyboard.svg">
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="spacer" style="padding: 40px 0px;"></div>
+ <div class="fbuttons"><button class="buttonf button3">All Subforums</button>
+
+      <button class="buttonf button3">Subforums</button>
+  <button class="buttonf button3">Latest</button>  <button class="buttonf button3">Top</button>  <button class="buttonf button3">Leaderboard</button>
+<div class="online">
+  <span class="textl">Online(78):</span>      <div id="imageContainer"></div>
+
+</div>
+    </div>
+      
+    </div>
+ <div class="big-container">
+  <div class="left-div">
+    <div class="heads">
+      <span class="textl">Subforum</span>
+      <span class="textl">Topic</span>
+    </div>
+    
+    <div class="styled-cell yellow">
+      <div class="content">
+        <div class="heading">JavaScript</div>
+        <div class="subtext">Ask questions and share tips for JavaScript, jQuery, React, Node, D3 - anything that touches the vast JavaScript and npm ecosystem.</div>
+      </div>
+      <div class="text-right">82/week</div>
+    </div>
+
+    <div class="styled-cell green">
+      <div class="content">
+        <div class="heading">Python</div>
+        <div class="subtext">Ask questions and share tips related to Python and any tools in the Python ecosystem.</div>
+      </div>
+      <div class="text-right">12/week</div>
+    </div>
+    <div class="styled-cell sky">
+      <div class="content">
+        <div class="heading">HTML-CSS</div>
+        <div class="subtext">Ask about anything related to HTML and CSS, including web design tools like Sass and Bootstrap.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell red">
+      <div class="content">
+        <div class="heading">Backend Development</div>
+        <div class="subtext">Discuss Linux, SQL, Git, Node.js / Django, Docker, NGINX, and any sort of database / server tools</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell blue">
+      <div class="content">
+        <div class="heading">C#</div>
+        <div class="subtext">Ask questions and share tips related to C# and any tools in the .NET ecosystem.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell sky">
+      <div class="content">
+        <div class="heading">Code Feedback</div>
+        <div class="subtext">Get feedback on projects you’ve built. Be sure to use a descriptive title.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell green">
+      <div class="content">
+        <div class="heading">Career Advice</div>
+        <div class="subtext">Discuss the process of getting a developer job, including preparing, networking, and interviewing. And share your success stories here.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell red">
+      <div class="content">
+        <div class="heading">You Can Do This</div>
+        <div class="subtext">You can do this! This is the place to discuss your goals, motivation, and overcoming setbacks.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell sky">
+      <div class="content">
+        <div class="heading">General</div>
+        <div class="subtext">This default category is for asking questions, and anything that doesn't seem to fit into the other categories. When in doubt, just use this.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell blue">
+      <div class="content">
+        <div class="heading">Contributors</div>
+        <div class="subtext">This is the place to discuss improvements to freeCodeCamp and the greater community.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div>
+  </div>
+  <div class="right-div">
+    <div class="heads">
+      <span class="textl">Latest</span>
+     
+    </div>
+    
+    <div class="styled-cell">
+      <img src="img/beau-carnes-gravatar.jpeg">
+      <div class="content">
+        <div class="heading">Right Cell Heading</div>
+        <div class="subtext">Right Cell Subtext goes here, left-aligned.</div>
+      </div>
+      <div class="text-right">23/week</div>
+    </div>
+
+    <div class="styled-cell "><img src="img/beau-carnes-gravatar.jpeg">
+      <div class="content">
+      <div class="heading">Python</div>
+        <div class="subtext">Ask questions and share tips related to Python and any tools in the Python ecosystem.</div>
+      </div>
+      <div class="text-right">12/week</div>
+    </div>
+    <div class="styled-cell"><img src="img/beau-carnes-gravatar.jpeg">
+      <div class="content">
+        <div class="heading">HTML-CSS</div>
+        <div class="subtext">Ask about anything related to HTML and CSS, including web design tools like Sass and Bootstrap.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell"><img src="img/beau-carnes-gravatar.jpeg">
+      <div class="content">
+        <div class="heading">Backend Development</div>
+        <div class="subtext">Discuss Linux, SQL, Git, Node.js / Django, Docker, NGINX, and any sort of database / server tools</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell"><img src="img/beau-carnes-gravatar.jpeg">
+      <div class="content">
+        <div class="heading">C#</div>
+        <div class="subtext">Ask questions and share tips related to C# and any tools in the .NET ecosystem.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> <div class="styled-cell "><img src="img/beau-carnes-gravatar.jpeg">
+      <div class="content">
+        <div class="heading">Code Feedback</div>
+        <div class="subtext">Get feedback on projects you’ve built. Be sure to use a descriptive title.</div>
+      </div>
+      <div class="text-right">42/week</div>
+    </div> 
+  </div>
+
+</div><footer>
+  <div class="donation-section">
+    <div class="donation-text">
+      <p>You can make a tax-deductible donation here.</p>
+    </div>
+    <button class="donation-button">Trending Guides</button>
+  </div>
+  <div class="separator"></div>
+  <div class="purpose-buttons">
+    <button class="purpose-button">About</button>
+    <button class="purpose-button">Alumni Network</button> 
+    <button class="purpose-button">Open Source</button>
+    <button class="purpose-button">Shop</button>
+    <button class="purpose-button">Support</button>
+    <button class="purpose-button">Sponsors</button>
+    <button class="purpose-button">Academic Honesty</button>
+    <button class="purpose-button">Code of Conduct</button>
+    <button class="purpose-button">Privacy Policy</button>
+    <button class="purpose-button">Terms of Service</button>
+    <button class="purpose-button">Copyright Policy</button>
+
+
+  </div>
+</footer>
+    <script>
+
+const imageUrls = [
+  "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png",
+  "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png",
+  "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png",
+  "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png",
+   "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png", "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png", "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png", "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png", "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png", "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png",
+   "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png",
+  "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png",
+  "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png","https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/dancouper/288/158608_2.png",
+  "https://sea1.discourse-cdn.com/freecodecamp/user_avatar/forum.freecodecamp.org/sebzg/288/328799_2.png",
+];
+
+const imageContainer = document.getElementById("imageContainer");
+
+// Dynamically create img elements and append them to the container
+imageUrls.forEach(url => {
+  const img = document.createElement("img");
+  img.src = url;
+  img.alt = "Online User";
+  imageContainer.appendChild(img);
+});
+</script>
+
+</body>
+</html>

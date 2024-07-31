@@ -1,0 +1,17 @@
+
+.leaderboard-table {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+.leaderboard-table th, .leaderboard-table td {
+    text-align: left;
+    padding: 10px;
+}
+.leaderboard-table th {
+    background-color: #66FCF1; 
+    color: white;
+}
+.leaderboard-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

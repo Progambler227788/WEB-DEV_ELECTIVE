@@ -1,0 +1,46 @@
+var used for old browser support.
+let from 2015 onwards.
+const (value, datatype not to be changed)
+
+variables like
+
+let a;
+
+a will have undefined value.
+
+
+variables like:
+
+var a = 0;
+var a;
+
+a will still have 0.
+
+You can redeclare only with var keyword, not with
+let and const.
+
+
+$ is allowed in variable names.
+
+variables declared with let inside block can't be used
+outside block but declared with var keyword can
+be used
+
+
+var x = 2;   // Allowed
+let x = 3;   // Not allowed
+
+{
+let x = 2;   // Allowed
+let x = 3;   // Not allowed
+}
+
+
+JavaScript Declarations are Hoisted
+In JavaScript, a variable can be declared after it has been used.
+
+In other words; a variable can be used before it has been declared.
+{
+let x = 2;   // Allowed
+var x = 3;   // Not allowed
+}

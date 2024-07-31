@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 
+        Form 1
+    </title>
+    <style>
+        *{
+            background-color: rgb(179, 207, 123);
+            margin-bottom: 40px;
+        }
+        h1{
+            color: red;
+         
+            text-align: center;
+        }
+        .margin{
+    
+           text-align: center;
+        }
+        label,input {
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <h1> Personal details</h1>
+    <form class="margin">
+        <label> Name: </label>
+        <input type="text" style=" background-color: rgb(255, 255, 255);" >
+        <br>
+        <label> Passoword: </label>
+        <input type="password" style=" background-color: rgb(255, 255, 255);" >
+        <br>
+        <label> Email ID: </label>
+        <input type="email" style=" background-color: rgb(255, 255, 255);" >
+        <br>
+        <label> Gender: </label>
+        <input type="radio" name="r1" style=" background-color: rgb(255, 255, 255);" >Male
+        <input type="radio" name="r1" style=" background-color: rgb(255, 255, 255);" >Female
+        <br>
+        <label> Contact# </label>
+        <input type="number" style=" background-color: rgb(255, 255, 255);" >  
+        
+        <h1> Education Qualification</h1> <br>
+        <label> Degree:  </label>
+        <select style=" background-color: rgb(255, 255, 255);" >
+            <option> BSCS </option>
+            <option> BSSE</option>
+        </select>
+        <label> Engineering:  </label>
+        <select style=" background-color: rgb(255, 255, 255);" >
+            <option> Chemical </option>
+            <option> Electrical </option>
+        </select>
+        <br>
+        <label> Hobbies:  </label>
+        <input type="checkbox" name="c1">Playing Chess
+        <input type="checkbox" name="c2">Reading Books <br>
+        <h1> Address</h1> <br> <br>
+        <textarea style=" background-color: rgb(255, 255, 255);" cols="30" rows="10"></textarea><br>
+        <label> Attach Resume: </label>
+        <input type="file" name="file">
+        <br>
+        <input type="button" name="submitt" value="Submitt">
+        <br>
+        <label> Date: </label>
+        <input type="datetime-local" name="date"style=" background-color: rgb(255, 255, 255);" >
+        <br>
+
+
+
+
+    </form>
+    
+</body>
+</html>
